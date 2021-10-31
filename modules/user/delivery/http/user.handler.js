@@ -1,7 +1,3 @@
-import bcrypt from 'bcryptjs';
-import UserMiddleware from './middleware/middleware.js';
-import Joi from 'joi';
-
 export default class UserHandler {
 	userUsecase
 

@@ -1,6 +1,6 @@
 import bcrypt from 'bcryptjs';
 
-export default class UserMysqlRepository {
+export default class UserRepository {
 	dbClient
 	tableName = 'users'
 

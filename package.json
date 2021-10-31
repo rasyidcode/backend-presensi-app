@@ -8,6 +8,7 @@
   },
   "type": "module",
   "dependencies": {
+    "awilix": "^6.0.0",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
@@ -19,5 +20,8 @@
     "morgan": "~1.9.1",
     "mysql-migrations": "^1.0.7",
     "mysql2": "^2.3.2"
+  },
+  "devDependencies": {
+    "mocha": "^9.1.3"
   }
 }

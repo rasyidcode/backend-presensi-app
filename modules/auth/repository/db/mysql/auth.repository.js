@@ -1,4 +1,4 @@
-export default class AuthMysqlRepository {
+export default class AuthRepsitory {
 	dbClient
 	tableName = 'users'
 
@@ -19,13 +19,5 @@ export default class AuthMysqlRepository {
 			throw err;
 		}
 	}
-
-	// async signIn(user, pass) {
-	// 	const query = ``;
-	// }
-
-	// async signOut() {
-
-	// }
 
 }
