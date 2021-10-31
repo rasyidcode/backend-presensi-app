@@ -4,7 +4,7 @@ export default class UserRepository {
 	dbClient
 	tableName = 'users'
 
-	constructor(dbClient) {
+	constructor({ dbClient }) {
 		this.dbClient = dbClient;
 	}
 

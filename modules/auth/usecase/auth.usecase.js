@@ -1,8 +1,8 @@
 export default class AuthUsecase {
 	authRepository
 
-	constructor(repository) {
-		this.authRepository = repository;
+	constructor({ authRepository }) {
+		this.authRepository = authRepository;
 	}
 
 	checkUser(user) {

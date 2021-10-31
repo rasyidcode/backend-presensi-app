@@ -2,7 +2,7 @@ export default class AuthRepsitory {
 	dbClient
 	tableName = 'users'
 
-	constructor(dbClient) {
+	constructor({ dbClient }) {
 		this.dbClient = dbClient;
 	}
 

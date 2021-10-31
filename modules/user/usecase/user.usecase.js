@@ -1,8 +1,8 @@
 export default class UserUsecase {
 	userRepository
 
-	constructor(repository) {
-		this.userRepository = repository;
+	constructor({ userRepository }) {
+		this.userRepository = userRepository;
 	}
 
 	createUser(data) {

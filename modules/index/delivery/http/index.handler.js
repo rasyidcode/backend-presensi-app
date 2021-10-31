@@ -1,8 +1,8 @@
 export default class IndexHandler {
 	indexUseCase
 
-	constructor(usecase) {
-		this.indexUseCase = usecase;
+	constructor({ indexUsecase }) {
+		this.indexUseCase = indexUsecase;
 	}
 
 	async getIndexPage(req, res, usecase) {
@@ -12,7 +12,6 @@ export default class IndexHandler {
 
 	registerRoutes(app, routerFactory) {
 		const subRouter = routerFactory.Router();
-
 		const getIndexPageHandler = (req, res) => this.getIndexPage(req, res, this.indexUseCase);
 		subRouter.get('/', getIndexPageHandler);
 

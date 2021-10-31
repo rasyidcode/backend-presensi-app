@@ -5,7 +5,7 @@ export default class UserMiddleware {
 	userSchema
 	userValidationOptions
 
-	constructor(userUsecase) {
+	constructor({ userUsecase }) {
 		this.userUsecase = userUsecase;
 
 		this.userSchema = Joi.object({

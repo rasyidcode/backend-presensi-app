@@ -1,7 +1,7 @@
 export default class UserHandler {
 	userUsecase
 
-	constructor(userUsecase) {
+	constructor({userUsecase, userMiddleware}) {
 		this.userUsecase = userUsecase;
 	}
 
@@ -26,11 +26,11 @@ export default class UserHandler {
 		}
 	}
 
-	registerRoutes(app, routerFactory, middleware) {
+	registerRoutes(app, routerFactory) {
 		const subRouter = routerFactory.Router();
 
 		const createUserHandler = (req, res) => this.createUser(req, res, this.userUsecase);
-		const createUserMiddleware = (req, res, next) => middleware.validateCreateUser(req, res, next);
+		const createUserMiddleware = (req, res, next) => this.userMiddleware.validateCreateUser(req, res, next);
 		subRouter.post('/', createUserMiddleware, createUserHandler);
 
 		app.use('/api/v1/user', subRouter);
