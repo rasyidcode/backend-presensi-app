@@ -1,6 +1,6 @@
 import bcrypt from 'bcryptjs';
 
-export default class AuthHandler {
+export default class HttpAuthHandler {
 	authUsecase
 
 	constructor(authUsecase) {
