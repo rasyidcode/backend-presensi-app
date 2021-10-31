@@ -4,15 +4,15 @@
  * Module dependencies.
  */
 
-var app = require('../app');
-var debug = require('debug')('backend-presensi-app:server');
-var http = require('http');
+import app from '../app.js';
+import debug from 'debug';
+import http from 'http';
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.SERVER_PORT || '3000');
 app.set('port', port);
 
 /**

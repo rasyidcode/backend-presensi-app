@@ -1,0 +1,3 @@
+node migration.js add migration create_table_users
+
+Run node migration.js up
